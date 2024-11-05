@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor page</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- library -->
+
+    <!-- google font -->
+     <link href="https://font.googleapis.com/css2?family=Andika&display=swap" rel="stylesheet">
+
+     <!-- google font -->
+     
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+     <!-- google font -->
+      <style>
+        :root{
+            --black:black;
+            --purple:purple;
+            --light-color:#666;
+            --box-shadow:2px 2px 12px grey;
+            --border:2rem solid rgba(0,0,0,.1);
+            --dark-moderate-violet:#663399;
+        }
+        *
+        {
+            margin:0;
+            padding: 0;
+            box-sizing:border-box;
+            border:none;
+            outline:none;
+            text-decoration:none;
+            text-transform:none;
+            transition:all .2s linear;
+            font-family: 'roboto';
+        }
+        html
+        {
+            font-size:62.5%;
+            overflow-x:hidden;
+            scroll-padding-top:smooth;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            background:#fff;
+        }
+
+        /*header*/
+
+        .header
+        {
+            height:100px;
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            display:flex;
+            align-items:center;
+            border:1px solid;
+            justify-content: space-between;
+            padding:2rem 9%;
+            background:#fff;
+            z-index:1000;
+            box-shadow:var(--box-shadow);
+        }
+.header .logo img
+{
+    margin-top:10px;
+    height:90px;
+    width:90px;
+    display:inline-block;
+}
+.header .headbar a
+{
+    font-size:1.7rem;
+    border-radius:.5rem;
+    padding:.5rem 1.5rem;
+    color:var(--light-color);
+}
+.header .headbar a:hover{
+    color:#fff;
+    background:linear-gradient(120deg,#FAB2FF 40%,#663399);
+}
+.header .menubtn
+{
+    margin-right: 60px;
+}
+.header .menubtn button
+{
+    padding:10px 45px;
+    text-align:center;
+    font-size:14px;
+    color:#fff;
+    border:none;
+    background-image: linear-gradient(to right,#649bff,#0070fa,#649bff);
+    border-radius: 10px;
+}
+
+.container .heading
+{
+    padding-top: 8%;
+    color:#5969C2;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.container hr
+{
+    display:block;
+    margin-top:0.5em;
+    margin-left: 30px;
+    border-style: inset;
+    border-width: 3px;
+}
+
+.top .box-container
+{
+    padding:6rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap:1.5rem;
+}
+.top .box-container .box
+{
+    height:100%;
+    width:100%;
+    padding:3rem 2rem;
+    background:#fff;
+    text-align:center;
+    box-shadow: var(--box-shadow);
+}
+.top .box-container .box img
+{
+    margin:1rem 0;
+    height: 17rem;
+    width:100%;
+}
+.top .box-container .box h1
+{
+    font-size:2.5rem;
+    line-height:1.8;
+    color:var(--dark-moderate-violet);
+}
+
+.top .box-container .box p
+{
+    font-size:1.5rem;
+    line-height:1.8rem;
+    color:var(--light-color);
+    padding:1rem 0;
+}
+.btn
+{
+    border:1px solid var(--black);
+    display:inline-block;
+    margin-top:1rem;
+    padding:.8rem 3rem;
+    font-size:1.7rem;
+    border-radius: .5rem;
+    color:var(--black);
+    cursor:pointer;
+    background:none;
+}
+
+.btn:hover
+{
+    background: linear-gradient(120deg,#FAB2FF 40%,#663399);
+    color:#fff;
+}
+.bottom .container .heading
+{
+padding-top:0%;
+color:blue;
+text-align:center;
+font-size:2.5rem;
+}
+.bottom .box-container
+{
+    padding:6rem;
+    display:grid;
+    grid-template-columns:auto auto auto auto;
+    gap:1.5rem;
+}
+.bottom .box-container .box
+{
+    height:100%;
+    width:100%;
+    padding:3rem 2rem;
+    background:#fff;
+    text-align:center;
+    box-shadow: var(--box-shadow);
+}
+.img-container
+{
+    height:230px;
+    width:200px;
+    overflow:hidden;
+    border-radius:0px 0px 20px 20px;
+    display:inline-block;
+}
+.img-container img
+{
+    transform:skew(0deg,-13deg);
+    height:250px;
+    width:270px;
+    margin:-35px 0px 0px -70px;
+}
+.inner-skew
+{
+    display:inline-block;
+    border-radius:20px;
+    overflow:hidden;
+    padding:0px;
+    transform:skew(0deg,13deg);
+    font-size:0px;
+    margin:20px 0px 0px 0px;
+    background:white;
+    height:190px;
+    width:200px;
+}
+.bottom .box-container .box h1
+{
+    font-size:2.5rem;
+    line-height:1.8;
+    color:var(--dark-moderate-violet);
+}
+
+.bottom .box-container .box p
+{
+    font-size:1.5rem;
+    line-height:1.8rem;
+    color:var(--light-color);
+    padding:1rem 0;
+}
+      </style>
+</head>
+<body>
+    <!-- header -->
+
+    <header class="header">
+        <a href="#"  class="logo">
+            <img src="C:/Users/narmi/Desktop/hospital management system/pic2.png">
+        </a>
+
+        <!-- navbar -->
+
+        <nav class="headbar">
+            <a href="home.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="doc.html">Doctors</a>
+            <a href="#medicine">Medicine</a>
+            <a href="#service">Service</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <!-- nav bar -->
+
+        <div class="menubtn">
+            <button>Helpline</button>
+        </div>
+    </header>
+
+    <!-- top -->
+     <section class="top" id="top">
+        <div class="container">
+            <h1 class="heading">TOP SPECIALTIES</h1>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <img src="C:/Users/narmi/Desktop/hospital management system/pic3.png">
+                <h1 class="title">Dermatology</h1>
+                <p>Specialists for skin and hair treatments</p>
+                <p>Pimples,Acne,Hairfall,Dandruff</p>
+                <a href="#" class="btn">Read more..</a>
+            </div>
+
+            <div class="box">
+                <img src="C:/Users/narmi/Desktop/hospital management system/pic4.png">
+                <h1 class="title">General Physician</h1>
+                <p>Managing acute medical conditions</p>
+                <p>Typoid,Abdominal,Migraine,Infections</p>
+                <a href="#" class="btn">Read more..</a>
+            </div>
+
+            <div class="box">
+                <img src="C:/Users/narmi/Desktop/hospital management system/pic5.png">
+                <h1 class="title">Paediatrics</h1>
+                <p>Specialists to care and treat Children</p>
+                <p>Constipation,Autism,Nutrition</p>
+                <a href="#" class="btn">Read more..</a>
+            </div>
+
+            <div class="box">
+                <img src="C:/Users/narmi/Desktop/hospital management system/pic6.png">
+                <h1 class="title">Recommended Doctors</h1>
+                <p>Top rated Medicure doctors.</p>
+                <p>Includes all specialities</p>
+                <a href="#" class="btn">Read more..</a>
+            </div>
+        </div>
+     </section>
+
+     <!-- bottom -->
+
+     <section class="bottom" id="bottom">
+        <div class="container">
+            <h1 class="heading">Other Specialities</h1>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+              <div class="img-container">
+               <div class="inner-skew">
+                <img src="C:/Users/narmi/Desktop/hospital management system/pic8.png">
+               </div>
+              </div>
+
+            <h1 class="title">Covid consultation</h1>
+            <p>Treatment of Covid-19</p>
+            <p>Cough,Fever,Breathlesness,Headache etc..</p>
+            <a href="#" class="btn">Read more..</a>
+            </div>
+
+
+            <div class="box">
+                <div class="img-container">
+                 <div class="inner-skew">
+                  <img src="C:/Users/narmi/Desktop/hospital management system/pic7.png" style="padding-left: 35px; padding-top: 25px;">
+                 </div>
+                </div>
+  
+              <h1 class="title">Dentist</h1>
+              <p>Specialists for dental issue and treatments</p>
+              <p>Toothache,Mouth,Ulcer,Crooked Teeth</p>
+              <a href="#" class="btn">Read more..</a>
+              </div>
+
+              <div class="box">
+                <div class="img-container">
+                 <div class="inner-skew">
+                  <img src="C:/Users/narmi/Desktop/hospital management system/pic9.png" style="padding-left: 35px; padding-top :39px">
+                 </div>
+                </div>
+  
+              <h1 class="title">Cardiology</h1>
+              <p>Specialists for heart and blood pressure Problems</p>
+              <p>Chest pain,Heart Failure,Cholesterol</p>
+              <a href="#" class="btn">Read more..</a>
+              </div>
+
+              <div class="box">
+                <div class="img-container">
+                 <div class="inner-skew">
+                  <img src="C:/Users/narmi/Desktop/hospital management system/pic10.png" style="padding-left:53px; padding-top: 30px;">
+                 </div>
+                </div>
+  
+              <h1 class="title">Urology</h1>
+              <p>Specialists for disorders of urinary tract and male reproductive organs </p>
+              <p>Urinary infection,Kidney stones etc..</p>
+              <a href="#" class="btn">Read more..</a>
+              </div>
+
+        </div>
+     </section>
+</body>
+</html>
